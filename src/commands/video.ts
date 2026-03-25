@@ -1,5 +1,7 @@
 import { Command } from 'commander';
 import * as ffmpeg from 'fluent-ffmpeg';
+import ffmpegStatic from 'ffmpeg-static';
+if (ffmpegStatic) ffmpeg.setFfmpegPath(ffmpegStatic);
 import * as path from 'path';
 import * as fs from 'fs';
 import { resolveGlob, ensureAbsolute } from '../utils/glob';
